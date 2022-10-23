@@ -12,6 +12,7 @@ def game_intro ():
     print("")
     print("")
     print("")
+    print("")
 
 def player_count ():
 
@@ -29,8 +30,6 @@ def player_count ():
     else:
         print("The number of players you have selected is invalid.\nPlease reselect!")
         print("")
+        print("")
         time.sleep(1)
         player_count()
-
-game_intro()
-player_count()
