@@ -31,7 +31,18 @@ class Player:
                 print("Invalid answer! Please reselect.")
                 valid_answer = False
 
+    def display_actions(self):
 
-
-
+        print("Actions:      Press" + "           Rock crushes Scissors")
+        print("Rock            0" + "             Scissors cuts Paper")
+        print("Paper           1" + "             Paper covers Rock")
+        print("Sissors         2" + "             Rock crushes Lizard")
+        print("Lizard          3" + "             Lizard poisons Spock")
+        print("Spock           4" + "             Spock smashes Scissors")
+        print("                              Scissors decapitates Lizard")
+        print("                              Lizard eats Paper")
+        print("                              Paper disproves Spock")
+        print("                              Spock vaporizes Rock")
+    
 player_one = Player("Temp", "Temp")
+player_one.display_actions()
