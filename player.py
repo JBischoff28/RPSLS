@@ -3,10 +3,10 @@ import time
 
 class Player:
 
-    def __init__(self, player_type, actions):
+    def __init__(self, player_type):
         self.name = "Player One"
         self.type = player_type
-        self.action = actions
+        self.action_list = ["Rock", "Paper", "Sissors", "Lizard", "Spock"]
         self.set_name()
 
     def set_name(self):
@@ -43,6 +43,3 @@ class Player:
         print("                              Lizard eats Paper")
         print("                              Paper disproves Spock")
         print("                              Spock vaporizes Rock")
-    
-player_one = Player("Temp", "Temp")
-player_one.display_actions()
