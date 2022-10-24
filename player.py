@@ -1,14 +1,14 @@
 import time
 
 
+
 class Player:
 
     def __init__(self):
-        self.name = "Player One"
+        self.name = "Player"
         self.score = 0
         self.win = False
         self.action_list = ["Rock", "Paper", "Sissors", "Lizard", "Spock"]
-        self.set_name()
 
     def set_name(self):
 
@@ -31,6 +31,9 @@ class Player:
             else:
                 print("Invalid answer! Please reselect.")
                 valid_answer = False
+        
+        print("")
+        print("")
 
     def display_actions(self):
 
@@ -52,4 +55,4 @@ class Player:
         
     def display_score(self, player_two):
 
-        print(f"{self.name}: {self.score} --- {player_two.name}: {player_two.name}")
+        print(f"{self.name}: {self.score} --- {player_two.name}: {player_two.score}")
