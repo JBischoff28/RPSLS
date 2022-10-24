@@ -3,9 +3,10 @@ import time
 
 class Player:
 
-    def __init__(self, player_type):
+    def __init__(self):
         self.name = "Player One"
-        self.type = player_type
+        self.score = 0
+        self.win = False
         self.action_list = ["Rock", "Paper", "Sissors", "Lizard", "Spock"]
         self.set_name()
 
@@ -43,3 +44,15 @@ class Player:
         print("                              Lizard eats Paper")
         print("                              Paper disproves Spock")
         print("                              Spock vaporizes Rock")
+
+    def add_score(self):
+
+        if self.win == True:
+            self.score += 1
+            print(f"{self.name} won the round!")
+            time.sleep(1.5)
+            self.win == False
+        
+    def display_score(self, player_two):
+
+        print(f"{self.name}: {self.score} --- {player_two.name}: {player_two.name}")
