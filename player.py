@@ -47,11 +47,8 @@ class Player:
 
     def add_score(self):
 
-        if self.win == True:
-            self.score += 1
-            print(f"{self.name} won the round!")
-            time.sleep(1.5)
-            self.win == False
+        self.score += 1
+        time.sleep(1)
         
     def display_score(self, player_two):
 

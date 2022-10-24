@@ -32,3 +32,8 @@ class Human(Player):
             selected_action = self.action_list[4]
             time.sleep(0.5)
             print(f"{self.name} has made a selection!")
+        else:
+            print("Invalid response. Please choose a valid option!")
+            time.sleep(1)
+            self.pick_action()
+        return selected_action
