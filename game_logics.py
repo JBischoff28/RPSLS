@@ -6,7 +6,7 @@ from aiplayer import AI
 
 def game_intro ():
 
-    print("Welcome to the a game of Rock, Paper, Sissors, Lizard, Spock!")
+    print("Welcome to the a game of Rock, Paper, Scissors, Lizard, Spock!")
     print("")
     time.sleep(2)
     print("The game will go on until a player wins best of three rounds.")
@@ -47,7 +47,7 @@ def win_check(player_one, player_two, player_one_pick, player_two_pick):
         print("This round is a tie! Starting next round...")
         pass
     elif player_one_pick != player_two_pick and player_one_pick == "Rock":
-        if player_two_pick == "Sissors" or player_two_pick == "Lizzard":
+        if player_two_pick == "Scissors" or player_two_pick == "Lizzard":
             print(f"{player_one.name} wins the round!")
             print("")
             print("")
@@ -61,7 +61,7 @@ def win_check(player_one, player_two, player_one_pick, player_two_pick):
             player_two.add_score()
             time.sleep(0.75)
             player_one.display_score(player_two)
-    elif player_one_pick != player_two_pick and player_one_pick == "Sissors":
+    elif player_one_pick != player_two_pick and player_one_pick == "Scissors":
         if player_two_pick == "Paper" or player_two_pick == "Lizard":
             print(f"{player_one.name} wins the round!")
             print("")
@@ -107,7 +107,7 @@ def win_check(player_one, player_two, player_one_pick, player_two_pick):
             time.sleep(0.75)
             player_one.display_score(player_two)
     elif player_one_pick != player_two_pick and player_one_pick == "Spock":
-        if player_two_pick == "Sissors" or player_two_pick == "Rock":
+        if player_two_pick == "Scissors" or player_two_pick == "Rock":
             print(f"{player_one.name} wins the round!")
             print("")
             print("")
@@ -156,11 +156,14 @@ def multiplayer_game_logic():
 
     while player_one.win == False or player_two.win == False:
         
+        player_one.display_actions()
+        print(f"{player_one.name}, it is your turn!")
         player_one_pick = player_one.pick_action()
         time.sleep(0.5)
         print("")
         print("")
 
+        player_two.display_actions()
         print(f"{player_two.name}, it is your turn!")
         player_two_pick = player_two.pick_action()
         time.sleep(0.5)
@@ -169,6 +172,8 @@ def multiplayer_game_logic():
 
         win_check(player_one, player_two, player_one_pick, player_two_pick)
     
+    print("")
+    print("")
     play_again()
 
 def singleplayer_game_logic():
@@ -185,10 +190,13 @@ def singleplayer_game_logic():
 
     while player_one.win == False or player_two.win == False:
         
+        player_one.display_actions()
         player_one_pick = player_one.pick_action()
         time.sleep(0.5)
         print("")
         print("")
+
+        time.sleep(1)
 
         print(f"{player_two.name}, it is your turn!")
         time.sleep(1.5)
@@ -199,6 +207,8 @@ def singleplayer_game_logic():
 
         win_check(player_one, player_two, player_one_pick, player_two_pick)
     
+    print("")
+    print("")
     play_again()
 
 def ai_game_logic():
@@ -220,6 +230,8 @@ def ai_game_logic():
         print("")
         print("")
 
+        time.sleep(3)
+
         print(f"{player_two.name}, it is your turn!")
         player_two_pick = player_two.ai_action_select()
         time.sleep(0.5)
@@ -228,6 +240,8 @@ def ai_game_logic():
 
         win_check(player_one, player_two, player_one_pick, player_two_pick)
 
+    print("")
+    print("")
     play_again()
 
 def play_again():
@@ -235,7 +249,7 @@ def play_again():
     print("")
     print("")
     print("")
-    print("Thank you for playing a game of Rock, Paper, Sissors, Lizard, Spock!")
+    print("Thank you for playing a game of Rock, Paper, Scissors, Lizard, Spock!")
 
     play_check = input("Would you like to play again?")
 

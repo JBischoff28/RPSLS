@@ -8,7 +8,7 @@ class Player:
         self.name = "Player"
         self.score = 0
         self.win = False
-        self.action_list = ["Rock", "Paper", "Sissors", "Lizard", "Spock"]
+        self.action_list = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
 
     def set_name(self):
 
@@ -40,7 +40,7 @@ class Player:
         print("Actions:      Press" + "           Rock crushes Scissors")
         print("Rock            0" + "             Scissors cuts Paper")
         print("Paper           1" + "             Paper covers Rock")
-        print("Sissors         2" + "             Rock crushes Lizard")
+        print("Scissors         2" + "             Rock crushes Lizard")
         print("Lizard          3" + "             Lizard poisons Spock")
         print("Spock           4" + "             Spock smashes Scissors")
         print("                              Scissors decapitates Lizard")
